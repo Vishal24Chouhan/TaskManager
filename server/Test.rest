@@ -1,0 +1,25 @@
+GET http://localhost:4000/api/v1/tasks HTTP/1.1
+
+###
+GET http://localhost:4000/api/v1/tasks/637680a835bf9fc1a7d1a8e1 HTTP/1.1
+
+###
+POST http://localhost:4000/api/v1/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "completed": true
+}
+
+###
+PATCH http://localhost:4000/api/v1/tasks/637682e51360154aa494a076 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "New Task",
+    "completed": true
+}
+
+###
+DELETE http://localhost:4000/api/v1/tasks/63767ec8ad6501f1972c232d HTTP/1.1
+
