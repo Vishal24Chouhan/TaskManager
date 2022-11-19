@@ -16,8 +16,7 @@ app.use('/api/v1/tasks', taskRouter);
 const Connection = async () => {
     try {
          await mongoose.connect(process.env.DB_URL, {
-            useUnifiedTopology: true,
-            useNewUrlParser: true
+            useUnifiedTopology: true
         });
         console.log("Connected to DB");
         app.listen(process.env.PORT, () => {
