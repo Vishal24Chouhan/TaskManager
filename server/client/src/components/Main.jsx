@@ -54,7 +54,7 @@ const Main = () => {
   }, []);
 
   const getTasks = async () => {
-    const res = await axios.get("http://localhost:4000/api/v1/tasks");
+    const res = await axios.get("/api/v1/tasks");
     setTaskItems(res.data);
   };
 
@@ -97,7 +97,7 @@ const Main = () => {
                 <DeleteIcon
                   onClick={async () => {
                     await axios.delete(
-                      `http://localhost:4000/api/v1/tasks/${item._id}`
+                      `/api/v1/tasks/${item._id}`
                     );
                     await getTasks();
                   }}
